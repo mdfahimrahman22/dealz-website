@@ -1,3 +1,13 @@
 .u-section-1 .u-sheet-1 {
   min-height: 400px;
+}@font-face {
+  font-family: 'stratos-regular-TRIAL-BF63c604a073a47';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/stratos-regular-TRIAL-BF63c604a073a47.otf);
+}@font-face {
+  font-family: 'Oswald-SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Oswald-SemiBold.ttf);
 }
