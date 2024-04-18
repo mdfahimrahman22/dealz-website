@@ -43365,6 +43365,12 @@ a.u-link.u-text-hover-grey-90:hover {
   font-size: 1.125rem;
 }
 
+.u-header .u-menu-close-1 {
+  width: 22px;
+  height: 28px;
+  margin: 8px 53px 0 auto;
+}
+
 .u-header .u-nav-3 {
   font-size: 1.25rem;
   font-weight: 700;
@@ -43397,7 +43403,7 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-nav-3 {
-    margin: 20px auto 0 10px;
+    margin: 32px auto 0 10px;
   }
 }
  .u-footer {
