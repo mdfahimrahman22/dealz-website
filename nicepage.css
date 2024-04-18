@@ -43388,6 +43388,10 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-top: -48px;
     margin-right: 0;
   }
+
+  .u-header .u-menu-close-1 {
+    width: 22px;
+  }
 }
 
 
