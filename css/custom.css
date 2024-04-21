@@ -1,0 +1,70 @@
+body {
+  overflow-x: hidden;
+}
+
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+.chef-img {
+  bottom: 9px;
+  left: 0;
+  right: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.header-logo {
+  position: absolute;
+  width: 80% !important;
+  height: 80% !important;
+}
+
+.navbar {
+  /* margin: 0 55px 0 55px !important; */
+}
+
+.scooter-img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 30vh !important;
+  width: auto !important;
+}
+@media (max-width: 767px) {
+  .scooter-img {
+    height: 17vh !important;
+  }
+}
+.helmet {
+  height: 15vh;
+  width: auto;
+  position: absolute;
+  bottom: 23%;
+  right: 1%;
+}
+.home-page-header-ellipse {
+  position: absolute;
+  top: 0;
+  left: 2% !important;
+  margin: 0 !important;
+  height: 33vh;
+  width: auto;
+}
+.home-page-header-text {
+  margin: 0 !important;
+  position: absolute;
+  bottom: -10px;
+  display: block;
+  left: 0;
+  right: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.home-page-section1 {
+  min-height: 50vh !important;
+}
+.burger {
+}
