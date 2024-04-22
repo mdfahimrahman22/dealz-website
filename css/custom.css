@@ -1,6 +1,11 @@
 body {
   overflow-x: hidden;
 }
+.active {
+  text-decoration: underline 3px;
+  text-underline-offset: 1rem;
+  color: #00bfba;
+}
 
 .p-relative {
   position: relative;
@@ -16,16 +21,19 @@ body {
   margin-right: auto !important;
 }
 
+.text-black {
+  color: "#0F1114";
+}
+
 .header-logo {
   position: absolute;
-  width: 80% !important;
-  height: 80% !important;
+  width: 96px !important;
+  height: 35px !important;
 }
 
 .navbar {
-  /* margin: 0 55px 0 55px !important; */
+  width: 100% !important;
 }
-
 .scooter-img {
   position: absolute;
   right: 0px;
@@ -33,16 +41,12 @@ body {
   height: 30vh !important;
   width: auto !important;
 }
-@media (max-width: 767px) {
-  .scooter-img {
-    height: 17vh !important;
-  }
-}
+
 .helmet {
-  height: 15vh;
+  height: 13vh;
   width: auto;
   position: absolute;
-  bottom: 23%;
+  bottom: 42%;
   right: 1%;
 }
 .home-page-header-ellipse {
@@ -67,4 +71,34 @@ body {
   min-height: 50vh !important;
 }
 .burger {
+}
+
+@media (max-width: 767px) {
+  .scooter-img {
+    height: 17vh !important;
+  }
+}
+
+@media (min-width: 991px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100% !important;
+    margin: 0 0 !important;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 575px) {
+  .scooter-img {
+    height: 15vh !important;
+  }
+  .helmet {
+    height: 9vh;
+    width: auto;
+    bottom: 17%;
+    right: 1%;
+  }
 }
