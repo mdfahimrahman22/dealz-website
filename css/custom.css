@@ -1,6 +1,16 @@
 body {
   overflow-x: hidden;
 }
+
+#section-1-u-text-1 {
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+
+#cursor {
+  margin: 0;
+  display: inline-block;
+}
 .active {
   text-decoration: underline 3px;
   text-underline-offset: 1rem;
@@ -70,7 +80,101 @@ body {
 .home-page-section1 {
   min-height: 50vh !important;
 }
-.burger {
+
+.box-container p {
+  margin: auto 0 !important;
+  font-family: "Stratos-Regular";
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.box-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: start;
+}
+.round-box {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  border: 1px solid #c8c8c8;
+  background: var(--White, #fff);
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.16);
+}
+.lord-icon {
+  width: 35px;
+  height: 33.906px;
+  flex-shrink: 0;
+  margin: auto;
+}
+.u-section-3 .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 32px 0px;
+  justify-items: start;
+}
+
+.services-div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-evenly;
+  margin: 58px 60px 0px 50px;
+}
+
+@media (max-width: 767px) {
+  .services-div {
+    flex-direction: column-reverse;
+
+  }
+}
+
+.services-text-div {
+  margin: auto 0;
+}
+
+.u-section-8 .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 32px 36px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.booking-tickets-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 32px 0px;
+  justify-items: start;
+  margin: 9px 10px 0 132px;
+}
+
+@media (min-width: 767px) {
+  .u-section-1 .u-text-1 {
+    font-size: 4.95rem;
+    bottom: -13px;
+  }
+}
+
+@media (max-width: 991px) {
+  .booking-tickets-grid-container {
+    margin-left: 22px;
+  }
+}
+@media (max-width: 1199px) {
+  .u-section-6 .u-text-1 {
+    margin-top: 0px !important;
+  }
+}
+.pay-utility-bills-icon {
+  width: 59px;
+  height: 59px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 767px) {

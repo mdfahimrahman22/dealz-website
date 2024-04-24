@@ -1,6 +1,29 @@
 // use a script tag or an external JS file
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin);
+
+  //------------------------   u-section-1 ------------------------//
+
+
+  gsap.fromTo(
+    "#cursor",
+    { autoAlpha: 0, x: -20 },
+    { autoAlpha: 1, duration: 0.5, repeat: -1, ease: SteppedEase.config(1) }
+  );
+
+  gsap.to("#section-1-u-text-1", {
+    text: {
+      value:
+        "Restaurant food,<br>takeaway and groceries.",
+    },
+    duration: 7,
+    delay: 1,
+    repeat: -1,
+    yoyo: true,
+    ease: "slow(0.7,0.7,false)",
+  });
+
   //------------------------   u-section-2 ------------------------//
   // parallax effect
   document.addEventListener("mousemove", parallax);
@@ -111,6 +134,37 @@ document.addEventListener("DOMContentLoaded", (event) => {
     yPercent: 30,
     duration: 4,
   });
+
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".u-section-4",
+      start: "50% 80%",
+      end: "50% 0%",
+      toggleActions: "play pause resume reset",
+      // markers: true,
+    },
+  });
+
+  tl.from("#pay-utility-bills-icon-1", {
+    opacity: 0,
+    x: -100,
+  });
+  tl.from("#pay-utility-bills-icon-2", {
+    opacity: 0,
+    x: -100,
+  });
+  tl.from("#pay-utility-bills-icon-3", {
+    opacity: 0,
+    x: -100,
+  });
+  tl.from("#pay-utility-bills-icon-4", {
+    opacity: 0,
+    x: -100,
+  });
+  tl.from("#pay-utility-bills-icon-5", {
+    opacity: 0,
+    x: -100,
+  });
   //------------------------   u-section-5 ------------------------//
   gsap.from("#mobile-img", {
     scrollTrigger: {
@@ -183,6 +237,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
   tl.from("#section-6-group-elements-4", {
     opacity: 0,
     x: -100,
+  });
+
+  gsap.to("#and-many-more-text", {
+    duration: 2,
+    delay: 1,
+    repeat: -1,
+    // yoyo: true,
+    text: {
+      value: "and many more...",
+    },
   });
 
   //------------------------   u-section-8 ------------------------//
