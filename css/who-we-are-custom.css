@@ -1,0 +1,103 @@
+body {
+  overflow-x: hidden;
+}
+.active {
+  text-decoration: underline 3px;
+  text-underline-offset: 1rem;
+  color: #00bfba;
+}
+.header-logo {
+  position: absolute;
+  width: 96px !important;
+  height: 35px !important;
+}
+.navbar {
+  width: 100% !important;
+}
+@media (min-width: 991px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100% !important;
+    margin: 0 0 !important;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+
+.text-black {
+  color: "#0F1114";
+}
+.box-container p {
+  margin: auto 0 !important;
+  font-family: "Stratos-Regular";
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.box-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: start;
+}
+.round-box {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  border: 1px solid #c8c8c8;
+  background: var(--White, #fff);
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.16);
+}
+.lord-icon {
+  width: 35px;
+  height: 33.906px;
+  flex-shrink: 0;
+  margin: auto;
+}
+.u-section-2 .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 32px 0px;
+  justify-items: start;
+}
+@media (min-width: 1199px) {
+  .u-section-2 .grid-container {
+    margin: 56px auto 0 48px;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.pay-utility-bills-icon {
+  width: 59px;
+  height: 59px;
+  flex-shrink: 0;
+}
+
+.booking-tickets-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 32px 0px;
+  justify-items: start;
+  margin: 9px 10px 0 132px;
+}
+@media (max-width: 991px) {
+  .booking-tickets-grid-container {
+    margin-left: 22px;
+  }
+}

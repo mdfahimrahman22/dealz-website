@@ -3,8 +3,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(TextPlugin);
 
-  //------------------------   u-section-1 ------------------------//
+  $(".bounce-effect").on("mouseenter", function () {
+    var duration = 1;
+    TweenMax.to(this, duration / 4, { y: -25, ease: Power2.easeOut });
+    TweenMax.to(this, duration / 2, {
+      y: 0,
+      ease: Bounce.easeOut,
+      delay: duration / 4,
+    });
+  });
 
+  //------------------------   u-section-1 ------------------------//
 
   gsap.fromTo(
     "#cursor",
@@ -14,8 +23,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   gsap.to("#section-1-u-text-1", {
     text: {
-      value:
-        "Restaurant food,<br>takeaway and groceries.",
+      value: "Restaurant food,<br>takeaway and groceries.",
     },
     duration: 7,
     delay: 1,
@@ -75,6 +83,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger: "#delicious-foods-counter",
       start: "50% 80%",
       end: "50% 0%",
+      toggleActions: "play none none reset",
       //   markers: true,
     },
     textContent: 950,
@@ -87,7 +96,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
   var tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".u-layout-cell-2",
+      trigger: "#delicious-foods",
       start: "50% 80%",
       end: "50% 0%",
       toggleActions: "play pause resume reset",
@@ -95,15 +104,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  tl.from("#section-3-group-elements-1", {
+  tl.from("#delicious-foods-icon-1", {
     opacity: 0,
     x: 100,
   });
-  tl.from("#section-3-group-elements-2", {
+  tl.from("#delicious-foods-icon-2", {
     opacity: 0,
     x: 100,
   });
-  tl.from("#section-3-group-elements-3", {
+  tl.from("#delicious-foods-icon-3", {
     opacity: 0,
     x: 100,
   });
@@ -137,7 +146,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   var tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".u-section-4",
+      trigger: "#pay-utility-bills-section",
       start: "50% 80%",
       end: "50% 0%",
       toggleActions: "play pause resume reset",
@@ -178,9 +187,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     y: 100,
     duration: 1,
   });
-  gsap.from("#section-5-progress-circle", {
+  gsap.from("#pay-utility-bills-progress-circle", {
     scrollTrigger: {
-      trigger: "#section-5-progress-circle",
+      trigger: "#pay-utility-bills-progress-circle",
       start: "50% 80%",
       end: "0% 0%",
       toggleActions: "play pause resume reset",
@@ -201,7 +210,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
   gsap.from("#ticket-bg", {
     scrollTrigger: {
-      trigger: ".u-section-6",
+      trigger: "#booking-tickets-section",
       start: "0% 70%",
       end: "0% 20%",
       toggleActions: "play pause resume reset",
@@ -214,7 +223,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
   var tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".u-section-6",
+      trigger: "#booking-tickets-section",
       start: "50% 80%",
       end: "50% 0%",
       toggleActions: "play pause resume reset",
@@ -222,24 +231,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  tl.from("#section-6-group-elements-1", {
+  tl.from("#booking-tickets-icon-1", {
     opacity: 0,
     x: -100,
   });
-  tl.from("#section-6-group-elements-2", {
+  tl.from("#booking-tickets-icon-2", {
     opacity: 0,
     x: -100,
   });
-  tl.from("#section-6-group-elements-3", {
+  tl.from("#booking-tickets-icon-3", {
     opacity: 0,
     x: -100,
   });
-  tl.from("#section-6-group-elements-4", {
+  tl.from("#booking-tickets-icon-4", {
     opacity: 0,
     x: -100,
   });
 
-  gsap.to("#and-many-more-text", {
+  tl.to("#and-many-more-text", {
     duration: 2,
     delay: 1,
     repeat: -1,
@@ -252,7 +261,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //------------------------   u-section-8 ------------------------//
   var tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".u-section-8",
+      trigger: "#services-section",
       start: "50% 80%",
       end: "50% 0%",
       toggleActions: "play pause resume reset",
@@ -260,26 +269,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  tl.from("#section-8-group-elements-2", {
+  tl.from("#services-icon-2", {
     opacity: 0,
     x: -100,
   });
-  tl.from("#section-8-group-elements-1", {
+  tl.from("#services-icon-1", {
     opacity: 0,
     x: -100,
   });
-  tl.from("#section-8-group-elements-4", {
+  tl.from("#services-icon-4", {
     opacity: 0,
     x: -100,
   });
-  tl.from("#section-8-group-elements-3", {
+  tl.from("#services-icon-3", {
     opacity: 0,
     x: -100,
   });
-  tl.from("#section-8-group-elements-5", {
+  tl.from("#services-icon-5", {
     opacity: 0,
     x: -100,
+  });
+
+  //------------------------   u-section-9 ------------------------//
+
+  gsap.from("#partnet-with-dealz-img", {
+    scrollTrigger: {
+      trigger: "#partner-with-dealz-section",
+      start: "50% 80%",
+      end: "0% 0%",
+      toggleActions: "play pause resume reset",
+      //   markers: true,
+    },
+    opacity: 0,
+    scale: 0.5,
+    duration: 0.5,
   });
 });
-
-//------------------------   u-section-9 ------------------------//
